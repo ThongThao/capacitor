@@ -1,0 +1,108 @@
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #334155;
+  --muted: #64748b;
+  --primary: #a78bfa; /* pastel purple */
+  --primary-2: #f0abfc; /* pastel pink */
+  --accent: #7dd3fc; /* pastel blue */
+  --success: #86efac; /* pastel green */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% -20%, #f5f3ff 0%, transparent 60%),
+              radial-gradient(1200px 600px at 90% 0%, #ecfeff 0%, transparent 60%),
+              radial-gradient(1200px 600px at 50% 120%, #fef9c3 0%, transparent 60%),
+              var(--bg);
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.controls, .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.controls input, .controls select, .controls input[type="range"] {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: var(--card);
+  outline: none;
+  color: var(--text);
+}
+
+.buttons button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #e9d5ff;
+  color: #4c1d95;
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.buttons button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.buttons button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(167,139,250,.35);
+}
+
+/* Map container */
+.map-wrap {
+  background: var(--card);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,.04);
+}
+
+.map {
+  width: 100%;
+  height: 520px;
+  border-radius: 12px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.notes-list {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.note {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+}
